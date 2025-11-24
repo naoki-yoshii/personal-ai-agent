@@ -1,0 +1,33 @@
+{
+  "name": "mcp-notion-rag",
+  "version": "1.0.0",
+  "description": "Notion RAG MCP Server - Retrieval-Augmented Generation with Notion",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "watch": "tsx watch src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "notion",
+    "rag",
+    "ai"
+  ],
+  "author": "naoki-yoshii",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
