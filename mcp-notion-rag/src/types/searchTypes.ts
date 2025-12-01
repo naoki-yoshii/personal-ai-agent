@@ -29,6 +29,12 @@ export interface SearchResult {
 
   /** Notion ページへのURL（取得できる場合のみ設定） */
   url?: string;
+
+  /** 設定DBに登録されているこのデータベースの名前（例：アニメリスト、メモ、日記） */
+  databaseName?: string;
+
+  /** 設定DBに登録されているこのデータベースの用途説明 */
+  usageHint?: string;
 }
 
 /**
