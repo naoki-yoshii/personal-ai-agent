@@ -66,12 +66,12 @@ export interface AgentResult {
 /**
  * mcp-notion-rag サーバの URL
  */
-const MCP_SERVER_URL = 'http://localhost:3001';
+const MCP_SERVER_URL = process.env.NOTION_MCP_URL || 'http://127.0.0.1:3001';
 
 /**
  * mcp-web-search サーバの URL
  */
-const WEB_SEARCH_URL = 'http://localhost:3002';
+const WEB_SEARCH_URL = process.env.WEB_MCP_URL || 'http://127.0.0.1:3002';
 
 /**
  * LLM API を呼び出して回答を生成する
@@ -122,17 +122,32 @@ async function callLlm(prompt: string): Promise<string> {
 async function callNotionSearch(query: string): Promise<SearchKnowledgeResponse> {
   console.log(`\n🔍 Notion検索を実行します: "${query}"`);
 
-  const response = await axios.post<SearchKnowledgeResponse>(
-    `${MCP_SERVER_URL}/search_knowledge`,
-    { query },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+  const url = new URL('/search_knowledge', MCP_SERVER_URL).toString();
+  const body = { query };
 
-  return response.data;
+  console.log(`[DEBUG] Notion検索URL: ${url}`);
+  console.log(`[DEBUG] Request body:`, JSON.stringify(body));
+
+  try {
+    const response = await axios.post<SearchKnowledgeResponse>(
+      url,
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      console.error(`[ERROR] Notion検索が失敗しました`);
+      console.error(`[ERROR] Status: ${error.response.status}`);
+      console.error(`[ERROR] Response data:`, error.response.data);
+    }
+    throw error;
+  }
 }
 
 /**
@@ -144,17 +159,32 @@ async function callNotionSearch(query: string): Promise<SearchKnowledgeResponse>
 async function callWebSearch(query: string): Promise<WebSearchResponse> {
   console.log(`\n🌐 Web検索を実行します: "${query}"`);
 
-  const response = await axios.post<WebSearchResponse>(
-    `${WEB_SEARCH_URL}/web_search`,
-    { query },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+  const url = new URL('/web_search', WEB_SEARCH_URL).toString();
+  const body = { query };
 
-  return response.data;
+  console.log(`[DEBUG] Web検索URL: ${url}`);
+  console.log(`[DEBUG] Request body:`, JSON.stringify(body));
+
+  try {
+    const response = await axios.post<WebSearchResponse>(
+      url,
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      console.error(`[ERROR] Web検索が失敗しました`);
+      console.error(`[ERROR] Status: ${error.response.status}`);
+      console.error(`[ERROR] Response data:`, error.response.data);
+    }
+    throw error;
+  }
 }
 
 /**

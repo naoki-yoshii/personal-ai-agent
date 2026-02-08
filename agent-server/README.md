@@ -18,21 +18,26 @@ npm install --save-dev @types/cors
 
 ### 2. 環境変数の設定
 
-`.env` ファイルを作成し、以下の環境変数を設定してください：
+`.env.example` をコピーして `.env` を作成し、以下の環境変数を設定してください：
+
+```bash
+cp .env.example .env
+```
+
+`.env` の内容：
 
 ```env
-# サーバーポート（デフォルト: 3100）
-PORT=3100
-
 # LLM API設定（agent/src/agentCore.ts が参照）
 LLM_API_URL=https://api.openai.com/v1/chat/completions
 LLM_API_KEY=your-api-key-here
-LLM_MODEL=gpt-4
+LLM_MODEL=gpt-4.1-mini
 
-# Notion API設定（mcp-notion-rag が参照）
-NOTION_API_KEY=your-notion-api-key
-NOTION_CONFIG_DATABASE_ID=your-database-id
+# MCP サーバー URL
+NOTION_MCP_URL=http://127.0.0.1:3001
+WEB_MCP_URL=http://127.0.0.1:3002
 ```
+
+**重要**: MCP サーバー（`mcp-notion-rag` と `mcp-web-search`）が起動していることを確認してください。
 
 ## 使い方
 
