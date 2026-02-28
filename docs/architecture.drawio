@@ -1,129 +1,126 @@
 <mxfile host="app.diagrams.net" modified="2026-02-28T00:00:00.000Z" agent="Claude Code" version="21.0.0" type="device">
-  <diagram id="current-arch" name="Current Architecture (Local)">
+  <diagram id="current-arch" name="現在のアーキテクチャ（ローカル開発）">
     <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- ===== TITLE ===== -->
-        <mxCell id="title" value="Personal AI Agent — Current Architecture (Local Development)"
+        <!-- ===== タイトル ===== -->
+        <mxCell id="title" value="Personal AI Agent — 現在のアーキテクチャ（ローカル開発環境）"
           style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=17;fontStyle=1;fontColor=#1a1a2e;"
           vertex="1" parent="1">
           <mxGeometry x="80" y="18" width="1000" height="32" as="geometry" />
         </mxCell>
 
-        <!-- ===== ZONE: Application Layer ===== -->
+        <!-- ===== ゾーン: アプリケーション層 ===== -->
         <mxCell id="z_app" value=""
           style="rounded=2;fillColor=#f0f9f0;strokeColor=#82b366;strokeWidth=1.5;dashed=1;"
           vertex="1" parent="1">
           <mxGeometry x="60" y="155" width="1040" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="z_app_lbl" value="Application Layer  (TypeScript / Node.js 18+)"
+        <mxCell id="z_app_lbl" value="アプリケーション層（TypeScript / Node.js 18+）"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#5a8a5a;"
           vertex="1" parent="1">
-          <mxGeometry x="72" y="160" width="350" height="18" as="geometry" />
+          <mxGeometry x="72" y="160" width="400" height="18" as="geometry" />
         </mxCell>
 
-        <!-- ===== ZONE: MCP Services ===== -->
+        <!-- ===== ゾーン: MCPサービス層 ===== -->
         <mxCell id="z_mcp" value=""
           style="rounded=2;fillColor=#fffef0;strokeColor=#d6b656;strokeWidth=1.5;dashed=1;"
           vertex="1" parent="1">
           <mxGeometry x="60" y="310" width="850" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="z_mcp_lbl" value="MCP Service Layer  (Internal HTTP — each independently deployable)"
+        <mxCell id="z_mcp_lbl" value="MCPサービス層（内部HTTP通信 — 各サービスは独立してデプロイ可能）"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#a08020;"
           vertex="1" parent="1">
-          <mxGeometry x="72" y="315" width="450" height="18" as="geometry" />
+          <mxGeometry x="72" y="315" width="500" height="18" as="geometry" />
         </mxCell>
 
-        <!-- ===== ZONE: External Services ===== -->
+        <!-- ===== ゾーン: 外部サービス ===== -->
         <mxCell id="z_ext" value=""
           style="rounded=2;fillColor=#f8f8f8;strokeColor=#aaaaaa;strokeWidth=1.5;dashed=1;"
           vertex="1" parent="1">
           <mxGeometry x="60" y="455" width="850" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="z_ext_lbl" value="External Services"
+        <mxCell id="z_ext_lbl" value="外部サービス"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#666666;"
           vertex="1" parent="1">
           <mxGeometry x="72" y="460" width="200" height="18" as="geometry" />
         </mxCell>
 
-        <!-- ===== USER ===== -->
-        <mxCell id="user" value="&lt;b&gt;User&lt;/b&gt;"
+        <!-- ===== ユーザー ===== -->
+        <mxCell id="user" value="&lt;b&gt;ユーザー&lt;/b&gt;"
           style="ellipse;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="510" y="65" width="110" height="55" as="geometry" />
         </mxCell>
 
-        <!-- ===== APPLICATION LAYER ===== -->
-        <mxCell id="cli" value="&lt;b&gt;CLI (agent)&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;npm run dev &quot;question&quot;&lt;/font&gt;"
+        <!-- ===== アプリケーション層 ===== -->
+        <mxCell id="cli" value="&lt;b&gt;CLI（agent）&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;npm run dev &quot;質問文&quot;&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="90" y="188" width="175" height="55" as="geometry" />
         </mxCell>
 
-        <mxCell id="agent_server" value="&lt;b&gt;agent-server&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;HTTP API + Chat UI  :3100&lt;/font&gt;"
+        <mxCell id="agent_server" value="&lt;b&gt;agent-server&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;HTTP API + チャットUI  :3100&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="460" y="188" width="210" height="55" as="geometry" />
         </mxCell>
 
-        <mxCell id="tts_bridge" value="&lt;b&gt;tts-bridge&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Voice Interface  :3201&lt;/font&gt;"
+        <mxCell id="tts_bridge" value="&lt;b&gt;tts-bridge&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;音声インターフェース  :3201&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="870" y="188" width="185" height="55" as="geometry" />
         </mxCell>
 
-        <!-- ===== MCP SERVICES ===== -->
-        <mxCell id="notion_rag" value="&lt;b&gt;mcp-notion-rag&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Notion Knowledge Search  :3001&lt;/font&gt;"
+        <!-- ===== MCPサービス ===== -->
+        <mxCell id="notion_rag" value="&lt;b&gt;mcp-notion-rag&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Notion知識ベース検索  :3001&lt;/font&gt;"
           style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="110" y="345" width="210" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="web_search" value="&lt;b&gt;mcp-web-search&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Web Search (Google)  :3002&lt;/font&gt;"
+        <mxCell id="web_search" value="&lt;b&gt;mcp-web-search&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Web検索（Google）  :3002&lt;/font&gt;"
           style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="510" y="345" width="210" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== VOICEVOX (outside main zones) ===== -->
-        <mxCell id="voicevox" value="&lt;b&gt;VOICEVOX&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Local TTS Engine  :50021&lt;/font&gt;"
+        <!-- ===== VOICEVOX（メインゾーン外） ===== -->
+        <mxCell id="voicevox" value="&lt;b&gt;VOICEVOX&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;ローカル音声合成エンジン  :50021&lt;/font&gt;"
           style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="905" y="345" width="175" height="52" as="geometry" />
+          <mxGeometry x="905" y="345" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== EXTERNAL SERVICES ===== -->
-        <mxCell id="notion_api" value="&lt;b&gt;Notion API&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Personal Knowledge Database&lt;/font&gt;"
+        <!-- ===== 外部サービス ===== -->
+        <mxCell id="notion_api" value="&lt;b&gt;Notion API&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;個人知識データベース&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="100" y="490" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="serper" value="&lt;b&gt;Serper.dev&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Google Search API&lt;/font&gt;"
+        <mxCell id="serper" value="&lt;b&gt;Serper.dev&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Google 検索API&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="490" y="490" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="llm_api" value="&lt;b&gt;LLM API&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;Answer Generation (provider-agnostic)&lt;/font&gt;"
+        <mxCell id="llm_api" value="&lt;b&gt;LLM API&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555&#39; style=&#39;font-size:10px&#39;&gt;回答生成（プロバイダー非依存）&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="295" y="555" width="230" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== EDGES ===== -->
-        <!-- User → CLI -->
+        <!-- ===== エッジ（矢印） ===== -->
         <mxCell id="e_u_cli" value="" edge="1" source="user" target="cli" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- User → agent-server -->
         <mxCell id="e_u_srv" value="" edge="1" source="user" target="agent_server" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- User → tts-bridge -->
-        <mxCell id="e_u_tts" value="voice" edge="1" source="user" target="tts_bridge" parent="1">
+        <mxCell id="e_u_tts" value="音声入力" edge="1" source="user" target="tts_bridge" parent="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="730" y="92" />
@@ -131,19 +128,15 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <!-- tts-bridge → agent-server -->
         <mxCell id="e_tts_srv" value="HTTP /ask" edge="1" source="tts_bridge" target="agent_server" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- tts-bridge → VOICEVOX -->
-        <mxCell id="e_tts_vox" value="TTS" edge="1" source="tts_bridge" target="voicevox" parent="1">
+        <mxCell id="e_tts_vox" value="音声合成" edge="1" source="tts_bridge" target="voicevox" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- CLI → mcp-notion-rag -->
         <mxCell id="e_cli_nrag" value="HTTP POST" edge="1" source="cli" target="notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- CLI → mcp-web-search -->
         <mxCell id="e_cli_wsrch" value="HTTP POST" edge="1" source="cli" target="web_search" parent="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -152,53 +145,47 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <!-- agent-server → mcp-notion-rag -->
         <mxCell id="e_srv_nrag" value="" edge="1" source="agent_server" target="notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- agent-server → mcp-web-search -->
         <mxCell id="e_srv_wsrch" value="" edge="1" source="agent_server" target="web_search" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- mcp-notion-rag → Notion API -->
         <mxCell id="e_nrag_napi" value="" edge="1" source="notion_rag" target="notion_api" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- mcp-web-search → Serper.dev -->
         <mxCell id="e_wsrch_serp" value="" edge="1" source="web_search" target="serper" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- agent-server → LLM API -->
-        <mxCell id="e_srv_llm" value="+ context" edge="1" source="agent_server" target="llm_api" parent="1">
+        <mxCell id="e_srv_llm" value="コンテキスト付き" edge="1" source="agent_server" target="llm_api" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- CLI → LLM API -->
         <mxCell id="e_cli_llm" value="" edge="1" source="cli" target="llm_api" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- ===== LEGEND ===== -->
-        <mxCell id="leg_title" value="Legend"
+        <!-- ===== 凡例 ===== -->
+        <mxCell id="leg_title" value="凡例"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#333;"
           vertex="1" parent="1">
           <mxGeometry x="940" y="460" width="80" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="leg_app" value="Application Layer"
+        <mxCell id="leg_app" value="アプリケーション層"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;html=1;align=left;"
           vertex="1" parent="1">
           <mxGeometry x="930" y="482" width="160" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="leg_mcp" value="MCP Service"
+        <mxCell id="leg_mcp" value="MCPサービス"
           style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;html=1;align=left;"
           vertex="1" parent="1">
           <mxGeometry x="930" y="510" width="160" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="leg_ext" value="External Service"
+        <mxCell id="leg_ext" value="外部サービス"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=9;html=1;align=left;"
           vertex="1" parent="1">
           <mxGeometry x="930" y="538" width="160" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="leg_tts" value="Voice (Experimental)"
+        <mxCell id="leg_tts" value="音声機能（実験的）"
           style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;html=1;align=left;"
           vertex="1" parent="1">
           <mxGeometry x="930" y="566" width="160" height="22" as="geometry" />
@@ -208,187 +195,175 @@
     </mxGraphModel>
   </diagram>
 
-  <diagram id="future-arch" name="Future Architecture (AWS)">
+  <diagram id="future-arch" name="将来のアーキテクチャ（AWS）">
     <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- ===== TITLE ===== -->
-        <mxCell id="f_title" value="Personal AI Agent — Future Architecture (AWS)"
+        <!-- ===== タイトル ===== -->
+        <mxCell id="f_title" value="Personal AI Agent — 将来のアーキテクチャ（AWS デプロイ想定）"
           style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=17;fontStyle=1;fontColor=#1a1a2e;"
           vertex="1" parent="1">
           <mxGeometry x="80" y="18" width="1000" height="32" as="geometry" />
         </mxCell>
 
-        <!-- ===== AWS CLOUD BOUNDARY ===== -->
+        <!-- ===== AWSクラウド境界 ===== -->
         <mxCell id="aws_boundary" value=""
           style="rounded=2;fillColor=#fff8f0;strokeColor=#FF9900;strokeWidth=2;dashed=0;"
           vertex="1" parent="1">
           <mxGeometry x="50" y="145" width="1060" height="530" as="geometry" />
         </mxCell>
-        <mxCell id="aws_lbl" value="AWS Cloud"
+        <mxCell id="aws_lbl" value="AWS クラウド"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#FF9900;"
           vertex="1" parent="1">
           <mxGeometry x="62" y="150" width="150" height="22" as="geometry" />
         </mxCell>
 
-        <!-- ===== ECS FARGATE ZONE ===== -->
+        <!-- ===== ECS Fargateゾーン ===== -->
         <mxCell id="ecs_zone" value=""
           style="rounded=2;fillColor=#fef9e8;strokeColor=#d6b656;strokeWidth=1.5;dashed=1;"
           vertex="1" parent="1">
           <mxGeometry x="80" y="305" width="1000" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="ecs_lbl" value="ECS Fargate  (Containerized Microservices)"
+        <mxCell id="ecs_lbl" value="ECS Fargate（コンテナ化されたマイクロサービス群）"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#a08020;"
           vertex="1" parent="1">
-          <mxGeometry x="92" y="310" width="350" height="18" as="geometry" />
+          <mxGeometry x="92" y="310" width="400" height="18" as="geometry" />
         </mxCell>
 
-        <!-- ===== EXTERNAL SERVICES ZONE ===== -->
+        <!-- ===== 外部サービスゾーン ===== -->
         <mxCell id="ext_zone" value=""
           style="rounded=2;fillColor=#f8f8f8;strokeColor=#aaaaaa;strokeWidth=1.5;dashed=1;"
           vertex="1" parent="1">
           <mxGeometry x="80" y="605" width="1000" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="ext_lbl" value="External Services (3rd Party)"
+        <mxCell id="ext_lbl" value="外部サービス（サードパーティ）"
           style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#666666;"
           vertex="1" parent="1">
           <mxGeometry x="92" y="610" width="250" height="18" as="geometry" />
         </mxCell>
 
-        <!-- ===== USER ===== -->
-        <mxCell id="f_user" value="&lt;b&gt;User&lt;/b&gt;"
+        <!-- ===== ユーザー ===== -->
+        <mxCell id="f_user" value="&lt;b&gt;ユーザー&lt;/b&gt;"
           style="ellipse;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="510" y="52" width="110" height="55" as="geometry" />
         </mxCell>
 
         <!-- ===== ALB ===== -->
-        <mxCell id="alb" value="&lt;b&gt;ALB&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Application Load Balancer&lt;/font&gt;"
+        <mxCell id="alb" value="&lt;b&gt;ALB&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;ロードバランサー&lt;/font&gt;"
           style="rounded=1;fillColor=#ffe6cc;strokeColor=#FF9900;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="465" y="175" width="195" height="55" as="geometry" />
         </mxCell>
 
-        <!-- ===== ECS CONTAINERS ===== -->
-        <mxCell id="f_agent_srv" value="&lt;b&gt;agent-server&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Container (Task: 256 CPU / 512 MB)&lt;/font&gt;"
+        <!-- ===== ECSコンテナ ===== -->
+        <mxCell id="f_agent_srv" value="&lt;b&gt;agent-server&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;コンテナ（256 CPU / 512 MB）&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="110" y="338" width="230" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="f_notion_rag" value="&lt;b&gt;mcp-notion-rag&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Container (Task: 256 CPU / 512 MB)&lt;/font&gt;"
+        <mxCell id="f_notion_rag" value="&lt;b&gt;mcp-notion-rag&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;コンテナ（256 CPU / 512 MB）&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="450" y="338" width="230" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="f_web_srch" value="&lt;b&gt;mcp-web-search&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Container (Task: 256 CPU / 256 MB)&lt;/font&gt;"
+        <mxCell id="f_web_srch" value="&lt;b&gt;mcp-web-search&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;コンテナ（256 CPU / 256 MB）&lt;/font&gt;"
           style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
           <mxGeometry x="790" y="338" width="230" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== AWS SUPPORT SERVICES ===== -->
-        <mxCell id="s3" value="&lt;b&gt;S3&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Static assets / Data backup&lt;/font&gt;"
+        <!-- ===== AWSサポートサービス ===== -->
+        <mxCell id="s3" value="&lt;b&gt;S3&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;静的アセット / データバックアップ&lt;/font&gt;"
           style="rounded=1;fillColor=#ffe6cc;strokeColor=#FF9900;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="100" y="470" width="175" height="52" as="geometry" />
+          <mxGeometry x="100" y="470" width="195" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="cloudwatch" value="&lt;b&gt;CloudWatch&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Logs / Metrics / Alarms&lt;/font&gt;"
+        <mxCell id="cloudwatch" value="&lt;b&gt;CloudWatch&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;ログ / メトリクス / アラート&lt;/font&gt;"
           style="rounded=1;fillColor=#ffe6cc;strokeColor=#FF9900;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="320" y="470" width="185" height="52" as="geometry" />
+          <mxGeometry x="320" y="470" width="195" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="secrets_mgr" value="&lt;b&gt;Secrets Manager&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;API Keys (.env → Managed)&lt;/font&gt;"
+        <mxCell id="secrets_mgr" value="&lt;b&gt;Secrets Manager&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;APIキー管理（.env から移行）&lt;/font&gt;"
           style="rounded=1;fillColor=#ffe6cc;strokeColor=#FF9900;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="555" y="470" width="195" height="52" as="geometry" />
+          <mxGeometry x="545" y="470" width="210" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="iam" value="&lt;b&gt;IAM&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Service Roles / Least Privilege&lt;/font&gt;"
+        <mxCell id="iam" value="&lt;b&gt;IAM&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;サービスロール / 最小権限&lt;/font&gt;"
           style="rounded=1;fillColor=#ffe6cc;strokeColor=#FF9900;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="805" y="470" width="195" height="52" as="geometry" />
+          <mxGeometry x="790" y="470" width="210" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== EXTERNAL SERVICES ===== -->
-        <mxCell id="f_notion_api" value="&lt;b&gt;Notion API&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Knowledge Database&lt;/font&gt;"
+        <!-- ===== 外部サービス ===== -->
+        <mxCell id="f_notion_api" value="&lt;b&gt;Notion API&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;個人知識データベース&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="120" y="635" width="175" height="52" as="geometry" />
+          <mxGeometry x="120" y="635" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="f_serper" value="&lt;b&gt;Serper.dev&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Google Search API&lt;/font&gt;"
+        <mxCell id="f_serper" value="&lt;b&gt;Serper.dev&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;Google 検索API&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="460" y="635" width="175" height="52" as="geometry" />
+          <mxGeometry x="460" y="635" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <mxCell id="f_llm_api" value="&lt;b&gt;LLM API&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;OpenAI / Bedrock / etc.&lt;/font&gt;"
+        <mxCell id="f_llm_api" value="&lt;b&gt;LLM API&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555&#39;&gt;OpenAI / Bedrock など&lt;/font&gt;"
           style="rounded=1;fillColor=#f5f5f5;strokeColor=#777777;fontSize=12;html=1;align=center;"
           vertex="1" parent="1">
-          <mxGeometry x="810" y="635" width="175" height="52" as="geometry" />
+          <mxGeometry x="810" y="635" width="185" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ===== EDGES ===== -->
-        <!-- User → ALB -->
+        <!-- ===== エッジ（矢印） ===== -->
         <mxCell id="fe1" value="HTTPS" edge="1" source="f_user" target="alb" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ALB → agent-server -->
         <mxCell id="fe2" value="" edge="1" source="alb" target="f_agent_srv" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ALB → mcp-notion-rag -->
         <mxCell id="fe3" value="" edge="1" source="alb" target="f_notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ALB → mcp-web-search -->
         <mxCell id="fe4" value="" edge="1" source="alb" target="f_web_srch" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- agent-server → mcp-notion-rag (internal) -->
-        <mxCell id="fe5" value="internal" edge="1" source="f_agent_srv" target="f_notion_rag" parent="1">
+        <mxCell id="fe5" value="内部通信" edge="1" source="f_agent_srv" target="f_notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- agent-server → mcp-web-search (internal) -->
         <mxCell id="fe6" value="" edge="1" source="f_agent_srv" target="f_web_srch" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- mcp-notion-rag → Notion API -->
         <mxCell id="fe7" value="" edge="1" source="f_notion_rag" target="f_notion_api" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- mcp-web-search → Serper.dev -->
         <mxCell id="fe8" value="" edge="1" source="f_web_srch" target="f_serper" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- agent-server → LLM API -->
         <mxCell id="fe9" value="" edge="1" source="f_agent_srv" target="f_llm_api" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ECS → CloudWatch (logs) -->
-        <mxCell id="fe10" value="logs" edge="1" source="f_agent_srv" target="cloudwatch" parent="1">
+        <mxCell id="fe10" value="ログ出力" edge="1" source="f_agent_srv" target="cloudwatch" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ECS → Secrets Manager -->
-        <mxCell id="fe11" value="env secrets" edge="1" source="f_agent_srv" target="secrets_mgr" parent="1">
+        <mxCell id="fe11" value="シークレット取得" edge="1" source="f_agent_srv" target="secrets_mgr" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- ECS → IAM -->
-        <mxCell id="fe12" value="role" edge="1" source="f_notion_rag" target="iam" parent="1">
+        <mxCell id="fe12" value="ロール" edge="1" source="f_notion_rag" target="iam" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- ===== MIGRATION NOTE ===== -->
-        <mxCell id="note" value="&lt;b&gt;Migration Notes&lt;/b&gt;&lt;br/&gt;• /health endpoints → ECS liveness probe (no code change needed)&lt;br/&gt;• .env → Secrets Manager&lt;br/&gt;• localhost ports → ALB routing rules&lt;br/&gt;• stdout logs → CloudWatch Logs"
+        <!-- ===== 移行メモ ===== -->
+        <mxCell id="note" value="&lt;b&gt;移行ポイント&lt;/b&gt;&lt;br/&gt;• /health エンドポイント → ECS ヘルスチェックにそのまま利用可&lt;br/&gt;• .env → Secrets Manager に移行&lt;br/&gt;• localhost 固定ポート → ALB ルーティングルールへ&lt;br/&gt;• stdout ログ → CloudWatch Logs へ自動集約"
           style="text;html=1;strokeColor=#cccccc;fillColor=#ffffff;align=left;fontSize=10;fontColor=#333333;rounded=1;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;"
           vertex="1" parent="1">
-          <mxGeometry x="840" y="175" width="260" height="100" as="geometry" />
+          <mxGeometry x="830" y="175" width="270" height="105" as="geometry" />
         </mxCell>
 
       </root>
