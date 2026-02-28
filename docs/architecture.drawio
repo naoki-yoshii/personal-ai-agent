@@ -128,16 +128,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_tts_srv" value="HTTP /ask" edge="1" source="tts_bridge" target="agent_server" parent="1">
+        <mxCell id="e_tts_srv" value="/ask リクエスト" edge="1" source="tts_bridge" target="agent_server" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e_tts_vox" value="音声合成" edge="1" source="tts_bridge" target="voicevox" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_cli_nrag" value="HTTP POST" edge="1" source="cli" target="notion_rag" parent="1">
+        <mxCell id="e_cli_nrag" value="HTTP 呼び出し" edge="1" source="cli" target="notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_cli_wsrch" value="HTTP POST" edge="1" source="cli" target="web_search" parent="1">
+        <mxCell id="e_cli_wsrch" value="HTTP 呼び出し" edge="1" source="cli" target="web_search" parent="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="178" y="290" />
@@ -322,7 +322,7 @@
         </mxCell>
 
         <!-- ===== エッジ（矢印） ===== -->
-        <mxCell id="fe1" value="HTTPS" edge="1" source="f_user" target="alb" parent="1">
+        <mxCell id="fe1" value="HTTPS 通信" edge="1" source="f_user" target="alb" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fe2" value="" edge="1" source="alb" target="f_agent_srv" parent="1">
@@ -334,7 +334,7 @@
         <mxCell id="fe4" value="" edge="1" source="alb" target="f_web_srch" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fe5" value="内部通信" edge="1" source="f_agent_srv" target="f_notion_rag" parent="1">
+        <mxCell id="fe5" value="サービス間通信" edge="1" source="f_agent_srv" target="f_notion_rag" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fe6" value="" edge="1" source="f_agent_srv" target="f_web_srch" parent="1">
